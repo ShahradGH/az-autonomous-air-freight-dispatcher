@@ -1,0 +1,10 @@
+// Audit autonomous air freight slot bids vs cold-chain safety vetoes
+AirFreightDispatchAudit_CL
+| where TimeGenerated > ago(24h)
+| summarize 
+    TotalEvaluations = count(),
+    PermittedSwaps = countif(Action_s == "PERMIT_NMOC_SLOT_BID"),
+    ColdChainVetoes = countif(Action_s == "VETO_COLD_CHAIN_BREACH"),
+    DispatcherEscalations = countif(Action_s == "HOLD_FOR_CHIEF_DISPATCHER_DUAL_SIGNATURE")
+    by HubAirport_s, CargoClass_s
+| order by ColdChainVetoes desc

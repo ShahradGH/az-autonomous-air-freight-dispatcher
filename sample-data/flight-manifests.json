@@ -1,0 +1,20 @@
+[
+  {
+    "flightId": "BA-592",
+    "origin": "EGLL",
+    "proposedDiversion": "EGBB",
+    "cargoCode": "PIL",
+    "valueGbp": 3400000,
+    "diversionHasGdpColdRoom": false,
+    "expectedDecision": "HARD_VETO_COLD_CHAIN_BREACH"
+  },
+  {
+    "flightId": "BA-410",
+    "origin": "EGLL",
+    "proposedDiversion": "EGCC",
+    "cargoCode": "GEN",
+    "valueGbp": 180000,
+    "diversionHasGdpColdRoom": true,
+    "expectedDecision": "PERMIT_AUTONOMOUS_SLOT_SWAP"
+  }
+]

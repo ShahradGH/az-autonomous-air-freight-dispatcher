@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IATA ULD Cold-Chain Manifest",
+  "required": [
+    "flightNumber",
+    "cargoClass",
+    "minTempCelsius",
+    "maxTempCelsius",
+    "batteryHoldoverHours"
+  ],
+  "properties": {
+    "flightNumber": {
+      "type": "string"
+    },
+    "cargoClass": {
+      "enum": [
+        "GENERAL_DRY",
+        "PHARMA_ACTIVE_2_8C",
+        "BIOLOGICS_CRYO"
+      ]
+    }
+  }
+}

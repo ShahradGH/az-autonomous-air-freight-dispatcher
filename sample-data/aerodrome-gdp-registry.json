@@ -1,0 +1,14 @@
+{
+  "EGLL": {
+    "gdpCertified": true,
+    "envirotainerPowerStands": 24
+  },
+  "EGCC": {
+    "gdpCertified": true,
+    "envirotainerPowerStands": 8
+  },
+  "EGBB": {
+    "gdpCertified": false,
+    "envirotainerPowerStands": 0
+  }
+}

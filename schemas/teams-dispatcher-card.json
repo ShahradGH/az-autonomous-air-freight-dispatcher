@@ -1,0 +1,18 @@
+{
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "COLD-CHAIN SLOT SWAP VETO ALERT",
+      "weight": "Bolder",
+      "color": "Attention"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Approve Diversion with Ground Cold-Storage Confirmation"
+    }
+  ]
+}
