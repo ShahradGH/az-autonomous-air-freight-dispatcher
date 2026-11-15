@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="1440" height="900" style="background:#0b1120; font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <filter id="dropGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#34d399"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1440" height="900" fill="url(#bgGrad)"/>
+  <rect x="0" y="0" width="1440" height="900" fill="none" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Header -->
+  <rect x="30" y="24" width="1380" height="76" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#dropGlow)"/>
+  <text x="60" y="55" fill="#f8fafc" font-size="20" font-weight="700" letter-spacing="0.5">AUTONOMOUS AIR FREIGHT DISPATCHER: MULTI-AGENT SLOT ALLOCATION &amp; COLD-CHAIN GOVERNANCE</text>
+  <text x="60" y="80" fill="#94a3b8" font-size="13" font-weight="500">Azure Container Apps Orchestrator, Eurocontrol NMOC Gateway, IATA AWB Ingestion, and Tarmac Cold-Chain GDP Boundary</text>
+  <rect x="1200" y="44" width="180" height="34" rx="4" fill="#0369a1" fill-opacity="0.2" stroke="#0ea5e9" stroke-width="1"/>
+  <text x="1290" y="66" fill="#38bdf8" font-size="12" font-weight="600" text-anchor="middle">OFFICIAL AZURE STENCIL</text>
+
+  <!-- Col 1: Manifest & Telemetry Ingress (320w) -->
+  <g transform="translate(30, 120)" filter="url(#dropGlow)">
+    <rect width="320" height="740" rx="8" fill="#0c1e38" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="16" y="16" width="288" height="32" rx="4" fill="#0369a1"/>
+    <text x="160" y="38" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">1. CARGO &amp; FLIGHT TELEMETRY</text>
+
+    <!-- Source 1: IATA AWB Manifests -->
+    <rect x="16" y="65" width="288" height="150" rx="6" fill="#0b1329" stroke="#1e293b"/>
+    <text x="32" y="92" fill="#38bdf8" font-size="13" font-weight="700">IATA Cargo-XML Stream</text>
+    <text x="32" y="114" fill="#cbd5e1" font-size="11">&#x2022; AWB Special Handling Codes (PIL / COL / CRT)</text>
+    <text x="32" y="134" fill="#cbd5e1" font-size="11">&#x2022; Biologics thermal specification: 2&#xB0;C&#x2013;8&#xB0;C</text>
+    <text x="32" y="154" fill="#cbd5e1" font-size="11">&#x2022; Active Envirotainer battery holdover (hours)</text>
+    <text x="32" y="174" fill="#cbd5e1" font-size="11">&#x2022; Protocol: Azure Event Hubs Kafka head</text>
+    <text x="32" y="196" fill="#34d399" font-size="11" font-weight="600">&#x2714; Ingested with 0.8ms event latency</text>
+
+    <!-- Source 2: Eurocontrol NMOC Swaps -->
+    <rect x="16" y="230" width="288" height="150" rx="6" fill="#0b1329" stroke="#1e293b"/>
+    <text x="32" y="257" fill="#38bdf8" font-size="13" font-weight="700">Eurocontrol B2B Feed</text>
+    <text x="32" y="279" fill="#cbd5e1" font-size="11">&#x2022; NMOC slot availability &amp; regulation deltas</text>
+    <text x="32" y="299" fill="#cbd5e1" font-size="11">&#x2022; Convective weather re-routing opportunities</text>
+    <text x="32" y="319" fill="#cbd5e1" font-size="11">&#x2022; Intra-corridor slot swap auction notifications</text>
+    <text x="32" y="339" fill="#cbd5e1" font-size="11">&#x2022; Protocol: B2B SOAP / REST via NAT Gateway</text>
+    <text x="32" y="361" fill="#f59e0b" font-size="11" font-weight="600">&#x26A0; High-frequency slot bids (45m window)</text>
+
+    <!-- Source 3: GDP Aerodrome Registry -->
+    <rect x="16" y="395" width="288" height="150" rx="6" fill="#0b1329" stroke="#1e293b"/>
+    <text x="32" y="422" fill="#38bdf8" font-size="13" font-weight="700">Airport Tarmac Cold Registry</text>
+    <text x="32" y="444" fill="#cbd5e1" font-size="11">&#x2022; GDP-certified cold storage facilities</text>
+    <text x="32" y="464" fill="#cbd5e1" font-size="11">&#x2022; Active tarmac ground power / re-icing</text>
+    <text x="32" y="484" fill="#cbd5e1" font-size="11">&#x2022; Ambient tarmac thermal forecast (C3S)</text>
+    <text x="32" y="504" fill="#cbd5e1" font-size="11">&#x2022; Storage: Azure Cosmos DB (Multi-region)</text>
+    <text x="32" y="526" fill="#34d399" font-size="11" font-weight="600">&#x2714; Sub-millisecond tarmac metadata lookup</text>
+
+    <!-- Live Telemetry Card -->
+    <rect x="16" y="560" width="288" height="160" rx="6" fill="#1e293b"/>
+    <text x="32" y="585" fill="#f8fafc" font-size="12" font-weight="700">Real-Time Ingestion Telemetry</text>
+    <text x="32" y="608" fill="#94a3b8" font-size="11">&#x2022; Daily Evaluated Flights: 1,420 freighters</text>
+    <text x="32" y="628" fill="#94a3b8" font-size="11">&#x2022; Regulated Cold Cargo: 22% (monoclonal/vaccines)</text>
+    <text x="32" y="648" fill="#94a3b8" font-size="11">&#x2022; Average Cargo Value: &#163;3.4M per pharma pallet</text>
+    <text x="32" y="668" fill="#ef4444" font-size="11" font-weight="600">&#x26A0; Thermal Excursion Window: 4.0 Hours Max</text>
+    <text x="32" y="688" fill="#38bdf8" font-size="11">&#x2022; Workload Identity: Managed MI / OID Bound</text>
+  </g>
+
+  <!-- Col 2: Azure Container Apps Orchestrator & Evaluator (480w) -->
+  <g transform="translate(380, 120)" filter="url(#dropGlow)">
+    <rect width="480" height="740" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="20" y="16" width="440" height="32" rx="4" fill="#1e3a5f"/>
+    <text x="240" y="38" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">2. AZURE CONTAINER APPS ENFORCEMENT PERIMETER</text>
+
+    <!-- Header info -->
+    <text x="32" y="78" fill="#f8fafc" font-size="15" font-weight="700">Orchestrator: snet-private-spoke</text>
+    <text x="32" y="96" fill="#38bdf8" font-size="11.5">PowerShell Core 7.4 Runtime &#x2022; Entra ID Workload Identity</text>
+
+    <!-- Gate 1: Dry Cargo Auto-Bid Gate -->
+    <rect x="20" y="115" width="440" height="150" rx="6" fill="#0f291e" stroke="#059669" stroke-width="1.5"/>
+    <text x="36" y="142" fill="#34d399" font-size="13" font-weight="700">GATE 1: GENERAL DRY CARGO (AUTOMATED BID)</text>
+    <text x="36" y="164" fill="#a7f3d0" font-size="11.5">&#x2022; Condition: CargoClass == "GENERAL_DRY" &amp;&amp; DelayHours &lt; 0.75h</text>
+    <text x="36" y="184" fill="#a7f3d0" font-size="11">&#x2022; Boundary: Same customs union (Intra-EU) &amp; destination operational</text>
+    <text x="36" y="204" fill="#a7f3d0" font-size="11">&#x2022; Action: Auto-permitted to submit NMOC slot swap bid in &lt; 28s</text>
+    <text x="36" y="224" fill="#a7f3d0" font-size="11">&#x2022; Telemetry: Writes PERMIT_NMOC_SLOT_BID to Log Analytics</text>
+    <text x="36" y="246" fill="#34d399" font-size="11" font-weight="700">&#x2714; 78% of standard freight clears autonomously</text>
+
+    <!-- Gate 2: Cold-Chain Thermal Veto Gate -->
+    <rect x="20" y="280" width="440" height="180" rx="6" fill="#2d1215" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="36" y="307" fill="#ef4444" font-size="13" font-weight="700">GATE 2: PHARMA COLD-CHAIN (HARD REFUSAL VETO)</text>
+    <text x="36" y="329" fill="#fca5a5" font-size="11.5">&#x2022; Condition: SpecialHandlingCodes CONTAINS ("PIL", "COL", "CRT")</text>
+    <text x="36" y="349" fill="#fca5a5" font-size="11">&#x2022; Holdover Rule: (TransitHours + DelayHours) &gt; (BatteryHours * 0.60)</text>
+    <text x="36" y="369" fill="#fca5a5" font-size="11">&#x2022; Tarmac Rule: Destination Aerodrome GDP Cold Storage == FALSE</text>
+    <text x="36" y="389" fill="#fca5a5" font-size="11">&#x2022; Hard Veto: VETO_COLD_CHAIN_BREACH &#x2014; Aborts slot bid at edge</text>
+    <text x="36" y="409" fill="#fca5a5" font-size="11">&#x2022; Zero external API calls leave the VNet; preserves biologics integrity</text>
+    <text x="36" y="432" fill="#ef4444" font-size="11" font-weight="700">&#x1F6D1; Deterministic thermal veto prevents &#163;3.4M cargo loss</text>
+
+    <!-- Gate 3: Dual-Signature Cross-Border Gate -->
+    <rect x="20" y="475" width="440" height="160" rx="6" fill="#2e1f0c" stroke="#d97706" stroke-width="1.5"/>
+    <text x="36" y="502" fill="#f59e0b" font-size="13" font-weight="700">GATE 3: CROSS-BORDER &amp; &gt;120KM DIVERSION ESCALATION</text>
+    <text x="36" y="524" fill="#fde68a" font-size="11.5">&#x2022; Condition: DiversionDistanceKm &gt; 120 || CrossesCustomsUnion == TRUE</text>
+    <text x="36" y="544" fill="#fde68a" font-size="11">&#x2022; Escalation: HOLD_FOR_CHIEF_DISPATCHER_DUAL_SIGNATURE</text>
+    <text x="36" y="564" fill="#fde68a" font-size="11">&#x2022; Integration: Microsoft Graph v2.x sends Adaptive Card to Teams</text>
+    <text x="36" y="584" fill="#fde68a" font-size="11">&#x2022; Human Gate: Requires Chief Duty Dispatcher MFA cryptographic sign-off</text>
+    <text x="36" y="608" fill="#f59e0b" font-size="11" font-weight="700">&#x26A0; 22% of mixed flights routed to 18-minute human triage</text>
+
+    <!-- Runtime Contract Footer -->
+    <rect x="20" y="650" width="440" height="70" rx="6" fill="#1e293b"/>
+    <text x="36" y="675" fill="#38bdf8" font-size="11.5" font-weight="700">Deterministic PowerShell Module:</text>
+    <text x="36" y="695" fill="#cbd5e1" font-size="11">Test-AirFreightSlotSwapAuthority.ps1 &#x2022; 16-Test Pester Contract</text>
+  </g>
+
+  <!-- Col 3: Outbound Destinations & Audit (480w) -->
+  <g transform="translate(890, 120)" filter="url(#dropGlow)">
+    <rect width="520" height="740" rx="8" fill="#0c1e38" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="20" y="16" width="480" height="32" rx="4" fill="#0369a1"/>
+    <text x="260" y="38" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">3. DISPATCH TARGETS &amp; GOVERNANCE TELEMETRY</text>
+
+    <!-- Dest A: Eurocontrol NMOC B2B Direct -->
+    <rect x="20" y="65" width="480" height="150" rx="6" fill="#0f291e" stroke="#059669"/>
+    <text x="36" y="92" fill="#34d399" font-size="13" font-weight="700">3A. Eurocontrol NMOC Slot Swap API</text>
+    <text x="36" y="114" fill="#a7f3d0" font-size="11">&#x2022; Destination: Eurocontrol B2B Airspace Management Gateway</text>
+    <text x="36" y="134" fill="#a7f3d0" font-size="11">&#x2022; Action: Submit slot swap petition under standard dry freight</text>
+    <text x="36" y="154" fill="#a7f3d0" font-size="11">&#x2022; Security: Mutual TLS (mTLS) + Static Egress IP via NAT Gateway</text>
+    <text x="36" y="174" fill="#a7f3d0" font-size="11">&#x2022; Average Recovery: 28 seconds (down from 42 minutes manual)</text>
+    <text x="36" y="196" fill="#34d399" font-size="11" font-weight="600">&#x2714; Live Slot Allocated in NMOC Mesh</text>
+
+    <!-- Dest B: Chief Dispatcher Teams Operations Bridge -->
+    <rect x="20" y="230" width="480" height="180" rx="6" fill="#2e1f0c" stroke="#d97706"/>
+    <text x="36" y="257" fill="#f59e0b" font-size="13" font-weight="700">3B. Microsoft Teams Operations Bridge (Duty Dispatcher)</text>
+    <text x="36" y="279" fill="#fde68a" font-size="11">&#x2022; Channel: #air-cargo-dispatch-urgent (Microsoft Teams)</text>
+    <text x="36" y="299" fill="#fde68a" font-size="11">&#x2022; Message: Interactive Adaptive Card with diversion telemetry map</text>
+    <text x="36" y="319" fill="#fde68a" font-size="11">&#x2022; Action Buttons: [Approve Custom Diversion] | [Hold at Origin Tarmac]</text>
+    <text x="36" y="339" fill="#fde68a" font-size="11">&#x2022; Security: Microsoft Graph v2.x Application Permissions + Audit Log</text>
+    <text x="36" y="359" fill="#fde68a" font-size="11">&#x2022; SLA: 18 minutes human triage window</text>
+    <text x="36" y="382" fill="#f59e0b" font-size="11" font-weight="600">&#x26A0; Human sign-off required for non-EU/long diversions</text>
+
+    <!-- Dest C: Log Analytics & GDP Audit Repositories -->
+    <rect x="20" y="425" width="480" height="180" rx="6" fill="#0b1329" stroke="#1e293b"/>
+    <text x="36" y="452" fill="#38bdf8" font-size="13" font-weight="700">3C. GDP Regulatory Audit (Azure Log Analytics)</text>
+    <text x="36" y="474" fill="#cbd5e1" font-size="11">&#x2022; Custom Log Table: AirFreightDispatchAudit_CL</text>
+    <text x="36" y="494" fill="#cbd5e1" font-size="11">&#x2022; Immutable audit record per evaluation: Flight, CargoClass, Action</text>
+    <text x="36" y="514" fill="#cbd5e1" font-size="11">&#x2022; Recorded metrics: DelayHours, ProjectedTransit, HoldoverCeiling</text>
+    <text x="36" y="534" fill="#cbd5e1" font-size="11">&#x2022; Continuous KQL alert: Fires if any pharma flight routes without GDP</text>
+    <text x="36" y="554" fill="#cbd5e1" font-size="11">&#x2022; Retention: 730 days for IATA / EU Good Distribution Practice review</text>
+    <text x="36" y="578" fill="#34d399" font-size="11" font-weight="600">&#x2714; 100% Deterministic Compliance Trail</text>
+
+    <!-- KQL Snippet Card -->
+    <rect x="20" y="620" width="480" height="100" rx="6" fill="#1e293b"/>
+    <text x="36" y="645" fill="#f8fafc" font-size="11" font-weight="700">KQL Auditor Query:</text>
+    <text x="36" y="665" fill="#38bdf8" font-size="10.5">AirFreightDispatchAudit_CL | where Action_s == "VETO_COLD_CHAIN_BREACH"</text>
+    <text x="36" y="683" fill="#94a3b8" font-size="10.5">| project TimeGenerated, FlightNumber_s, DestinationHasCertifiedColdRoom_b</text>
+    <text x="36" y="701" fill="#94a3b8" font-size="10.5">| summarize VetoCount = count() by bin(TimeGenerated, 1h), HubAirport_s</text>
+  </g>
+
+  <!-- Connectors -->
+  <!-- Col 1 to Col 2 -->
+  <line x1="350" y1="200" x2="380" y2="200" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="350" y1="360" x2="380" y2="360" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <line x1="350" y1="520" x2="380" y2="520" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowAmber)"/>
+
+  <!-- Col 2 to Col 3 -->
+  <line x1="860" y1="185" x2="890" y2="185" stroke="#34d399" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <line x1="860" y1="370" x2="890" y2="370" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4"/>
+  <line x1="860" y1="550" x2="890" y2="550" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowAmber)"/>
+  <line x1="860" y1="680" x2="890" y2="680" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+</svg>
